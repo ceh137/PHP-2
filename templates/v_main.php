@@ -31,7 +31,13 @@
                         <a class="nav-link" href="index.php?act=contacts">Contacts</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php?act=auth">Login</a>
+                        <?php
+                        session_start();
+                        if (isset($_SESSION['user'])) { ?>
+                            <?= "<a class='nav-link' href='index.php?act=account'>Личный кабинет</a>" ?>
+                        <?php } else { ?>
+                            <?= "<a class='nav-link' href='index.php?act=auth'>Login</a>" ?>
+                        <?php } ?>
                     </li>
                 </ul>
                 <form class="d-flex">

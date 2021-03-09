@@ -12,6 +12,10 @@ class C_Page extends C_Basement
 
     public function action_index()
     {
+        if (isset($_GET['quit'])) {
+            session_start();
+            unset($_SESSION['user']);
+        }
         $this->title = "";
         $this->content = $this->Template("/Applications/MAMP/htdocs/Homework4/templates/v_index.php");
     }
