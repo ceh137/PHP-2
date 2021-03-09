@@ -1,6 +1,7 @@
 <div class="my-5">
     <h1 class="text-center">Наши товары</h1>
 </div>
+
 <div class="row row-cols-1 row-cols-md-2 g-4">
     <?php
 
@@ -19,6 +20,5 @@
     <?php endforeach; ?>
 </div>
 <div class="d-grid  col-3 mx-auto my-5">
-
-    <a href="index.php?act=catalog&lim=<?= $_GET['lim'] + 10 ?>" class="btn btn-primary">Button</a>
+    <button class="btn btn-primary" onclick="AddMore(<?= $_GET['lim'] ?>)">More</button>
 </div>

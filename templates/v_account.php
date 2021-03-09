@@ -12,4 +12,5 @@
     <dd class="col-sm-9"><?= $user['pass'] ?></dd>
 
 </dl>
+
 <a href="index.php?act=index&quit=true" class="link-dark">Выйти отсюдава!!!</a>

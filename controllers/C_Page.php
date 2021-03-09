@@ -23,9 +23,10 @@ class C_Page extends C_Basement
     {
         $goods = new M_Goods;
         if (isset($_GET['lim'])) {
-            $lim = 10 + intval($_GET['lim']);
+            $lim = intval($_GET['lim']);
         } elseif (!isset($_GET['lim'])) {
             $lim = 10;
+            header("Location: index.php?act=catalog&lim=10");
         }
         $prepgoods = $goods->get_goods(1, $lim);
 
